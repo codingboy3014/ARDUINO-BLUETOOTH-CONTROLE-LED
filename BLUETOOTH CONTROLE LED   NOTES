@@ -1,0 +1,9 @@
+Test Bluetooth Module
+
+Use a Bluetooth terminal app (e.g., Serial Bluetooth Terminal) on your phone.
+
+Pair the Bluetooth module with your phone.
+
+Open the terminal app and send commands:
+Send 1: The LED should turn ON.
+Send 0: The LED should turn OFF.
