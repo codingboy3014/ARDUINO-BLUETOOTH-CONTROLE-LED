@@ -1,0 +1,15 @@
+Connections
+
+Bluetooth Module:
+VCC → Arduino 5V
+GND → Arduino GND
+TXD → Arduino RX (Pin 0)
+RXD → Arduino TX (Pin 1)
+
+LED:
+Positive leg (anode) → Arduino Pin 13 (via a resistor)
+Negative leg (cathode) → Arduino GND
+
+
+Ensure the Bluetooth module is paired with your phone using a Bluetooth control app.
+
