@@ -1,0 +1,23 @@
+const int ledPin = 13; // LED connected to pin 13
+char incomingData;     // Variable to store incoming Bluetooth data
+
+void setup() {
+  Serial.begin(9600);   // Initialize serial communication with Bluetooth
+  pinMode(ledPin, OUTPUT); 
+  digitalWrite(ledPin, LOW); // Turn off LED initially
+}
+
+void loop() {
+  if (Serial.available()) {        // Check if Bluetooth data is available
+    incomingData = Serial.read();  // Read the incoming data
+
+    if (incomingData == '1') {     // If '1' is received, turn the LED ON
+      digitalWrite(ledPin, HIGH);
+      Serial.println("LED ON");    // Send confirmation back
+    } 
+    else if (incomingData == '0') { // If '0' is received, turn the LED OFF
+      digitalWrite(ledPin, LOW);
+      Serial.println("LED OFF");   // Send confirmation back
+    }
+  }
+}
